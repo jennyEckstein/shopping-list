@@ -1,3 +1,9 @@
-<p>
-  List of Shopping Lists
-</p>
+<ul>
+	<li *ngFor="let item of shopping_lists">
+	<div>
+		<h4>{{item.name}}</h4>
+		<p>{{item.description}}</p>
+		<h6>{{item.date | date}}</h6>
+	</div>
+	</li>
+</ul>

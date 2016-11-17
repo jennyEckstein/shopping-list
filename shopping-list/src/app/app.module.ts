@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header.component';
 import { ShoppingListsComponent } from './shopping-lists/shopping-lists.component';
 import { ItemListComponent } from './item-list/item-list.component';
+import { ShoppingListItemComponent } from './shopping-list-item/shopping-list-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     ShoppingListsComponent,
-    ItemListComponent
+    ItemListComponent,
+    ShoppingListItemComponent
   ],
   imports: [
     BrowserModule,
