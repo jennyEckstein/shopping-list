@@ -1,7 +1,13 @@
 
-<shop-shopping-list-item 
-*ngFor="let item of shoppingList; let i = index"
-[listItem]="shoppingList"
-[listItemId]="i">
-
-</shop-shopping-list-item>
+<div class="row">
+	<div class="col-xs-12">
+		<a class="btn btn-success">New Shopping List</a>
+	</div>
+</div>
+<div class="row">
+	<div class="col-xs-12">
+		<ul class="list-group">
+			<shop-shopping-list-item [item]="list"></shop-shopping-list-item>
+		</ul>
+	</div>
+</div>
