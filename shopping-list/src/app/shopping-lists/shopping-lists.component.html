@@ -5,11 +5,12 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-xs-12">
-		<ul class="list-group">
-			<shop-shopping-list-item 
-				[item]="list"
-				(click)="onSelected(list)"></shop-shopping-list-item>
-		</ul>
-	</div>
+<div class="col-xs-12">
+	<ul class="list-group">
+<shop-shopping-list-item 
+	*ngFor="let list of shoppingList"
+	[item]="list"
+	(click)="onSelected(list)" ></shop-shopping-list-item>
+	</ul>
+</div>
 </div>
