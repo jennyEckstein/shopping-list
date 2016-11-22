@@ -19,7 +19,9 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-xs-12">
-		Items
+Items
+	<div class="col-xs-12" 
+	*ngFor="let item of listItem?.listItems">	
+		{{ item.itemName }} - {{ item.itemAmount }}
 	</div>
 </div>
