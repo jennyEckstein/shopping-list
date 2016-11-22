@@ -3,7 +3,7 @@ export class ShoppingItem {
 			public name: string,
 			public description: string,
 			public imagePath: string,
-			public date: Date
+			public date: string
 		){}
 
 }

@@ -7,7 +7,9 @@
 <div class="row">
 	<div class="col-xs-12">
 		<ul class="list-group">
-			<shop-shopping-list-item [item]="list"></shop-shopping-list-item>
+			<shop-shopping-list-item 
+				[item]="list"
+				(click)="onSelected(list)"></shop-shopping-list-item>
 		</ul>
 	</div>
 </div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ShoppingItem } from './shopping-item';
+import { ShoppingItem } from '../shopping-item';
 
 
 @Component({
@@ -14,5 +14,4 @@ export class ShoppingListItemComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

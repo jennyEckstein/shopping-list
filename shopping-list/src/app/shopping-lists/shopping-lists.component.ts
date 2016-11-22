@@ -1,35 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { ShoppingItem } from '../shopping-list-item/shopping-item';
-
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ShoppingItem } from '../shopping-item';
 
 @Component({
   selector: 'shop-shopping-lists',
-  templateUrl: './shopping-lists.component.html',
-  styleUrls: ['./shopping-lists.component.css']
+  templateUrl: './shopping-lists.component.html'
 })
 export class ShoppingListsComponent implements OnInit {
-
-	shopping_lists: ShoppingItem[] = [
-		{name: 'Party Supplies', 
-		description: 'Hola GAY Christmass Party',
-		imagePath: 'C:/Users/Jenny/Downloads.GilSpitzer.jpg', 
-		date: new Date('12/10/2016')},
-		{name: 'LA Trip', 
-		description: 'Friends Cali Weekend',
-		imagePath: 'C:/Users/Jenny/Downloads.GilSpitzer.jpg', 
-		date: new Date('02/01/2017')},
-		{name: 'Weekly Food Restock', 
-		description: 'Weekly Food I need to buy',
-		imagePath: 'C:/Users/Jenny/Downloads.GilSpitzer.jpg', 
-		date: new Date('11/18/2016')}
-
-	];
+	shoppingList: ShoppingItem[] = [];
+	@Output() listSelected = new EventEmitter<ShoppingItem>();
+	list = new ShoppingItem(
+		'Girls Night', 
+		'Jewlery Making Party', 
+		'http://dcobbestateliquidators.com/wp-content/uploads/2016/06/GB-Jewlery-Borches-necklace-001-150x150.jpg', 
+		'11/21/2016');
 
   constructor() { }
 
-  
-
   ngOnInit() {
+  	
+  } 
+
+  onSelected(item: ShoppingItem){    
+  	this.listSelected.emit(item);  	
   }
 
 }

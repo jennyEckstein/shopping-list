@@ -1,16 +1,13 @@
-<table>
-	<tr>
-		<td>
-			<shop-header></shop-header>
-		</td>
-	</tr>
-	<tr>
-		<td>
-			<shop-shopping-lists></shop-shopping-lists>
-		</td>
-		<td>
-			<shop-item-list></shop-item-list>
-		</td>
-	</tr>
-</table>
-
+<shop-header></shop-header>
+<div class="row">
+	<div class="col-md-5">
+		<shop-shopping-lists (listSelected)="selected_item = $event"></shop-shopping-lists>
+	</div>
+	<div class="col-md-7">
+		<shop-shopping-item-detail [listItem]="selected_item"></shop-shopping-item-detail>
+	</div>
+</div>
+			
+		
+			
+		
