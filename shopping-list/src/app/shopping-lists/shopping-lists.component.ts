@@ -16,7 +16,7 @@ export class ShoppingListsComponent implements OnInit {
   constructor(private shoppingListService: ShoppingListService) { } 
 
   ngOnInit() {
-  	this.shoppingList = this.shoppingListService.getShoppingList();
+  	this.shoppingList    = this.shoppingListService.getShoppingList();
   } 
 
   onSelected(item: ShoppingItem){    

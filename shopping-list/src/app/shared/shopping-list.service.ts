@@ -4,7 +4,7 @@ import { Item } from './item';
 
 
 @Injectable()
-export class ShoppingListService {
+export class ShoppingListService{
 
 shoppingListItems: Item[] = [
     new Item('Coca-Cola', 1),
