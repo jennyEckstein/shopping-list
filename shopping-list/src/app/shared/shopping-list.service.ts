@@ -1,15 +1,10 @@
 import { Injectable } from '@angular/core';
 import { ShoppingItem } from '../shopping-item';
-import { Item } from './item';
+import { ShoppingListItemsService } from './shopping-list-items.service';
 
 
 @Injectable()
 export class ShoppingListService{
-
-shoppingListItems: Item[] = [
-    new Item('Coca-Cola', 1),
-    new Item('Water', 2)
-  ];
 
   shoppingList: ShoppingItem[] = [
   new ShoppingItem(
@@ -17,13 +12,13 @@ shoppingListItems: Item[] = [
     'Jewlery Making Party',
     'http://dcobbestateliquidators.com/wp-content/uploads/2016/06/GB-Jewlery-Borches-necklace-001-150x150.jpg',
     '11/21/2016',
-    this.shoppingListItems),
+    this.shoppingListItemsService.getItems()),
   new ShoppingItem(
     'New Years Bar Crowl',
     'Jewlery Making Party',
     'http://dcobbestateliquidators.com/wp-content/uploads/2016/06/GB-Jewlery-Borches-necklace-001-150x150.jpg',
     '12/31/2016',
-    this.shoppingListItems),
+    this.shoppingListItemsService.getItems()),
   new ShoppingItem(
     'Jenny B-Day - Rollercoasters',
     'Jewlery Making Party',
@@ -38,7 +33,7 @@ shoppingListItems: Item[] = [
     [])
   ];
 
-  constructor() { }
+  constructor(private shoppingListItemsService: ShoppingListItemsService) { }
 
   getShoppingList(){
   	return this.shoppingList;
