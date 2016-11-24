@@ -13,6 +13,9 @@ import { ShoppingItemDetailComponent } from './shopping-list-item/shopping-item-
 import { DropdownDirective } from './dropdown.directive';
 import { ShoppingListService } from './shared/shopping-list.service';
 import { ShoppingListItemsService } from './shared/shopping-list-items.service';
+import { ShoppingListDetailStartComponent } from './shopping-list-item/shopping-list-detail-start.component';
+import { child_routing } from './child-routes';
+import { ShoppingListEditComponent } from './shopping-list-edit/shopping-list-edit.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +26,15 @@ import { ShoppingListItemsService } from './shared/shopping-list-items.service';
     ShoppingListItemComponent,
     ShoppingItemDetailComponent,
     DropdownDirective,
+    ShoppingListDetailStartComponent,
+    ShoppingListEditComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routing
+    routing,
+    child_routing
   ],
   providers: [
   ShoppingListService,

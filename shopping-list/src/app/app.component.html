@@ -1,12 +1,12 @@
 <shop-header></shop-header>
 <div class="row">
 	<div class="col-md-5">
-	<router-outlet></router-outlet>
+	<router-outlet (listSelected)="selected_item = $event"></router-outlet>
 	<!-- <shop-shopping-lists (listSelected)="selected_item = $event"></shop-shopping-lists>  -->
 	</div>
 	<div class="col-md-7">
-	<router-outlet></router-outlet>
-		<!-- <shop-shopping-item-detail [listItem]="selected_item"></shop-shopping-item-detail> -->
+	
+		 <shop-shopping-item-detail [listItem]="selected_item"></shop-shopping-item-detail>
 	</div>
 </div>
 			
